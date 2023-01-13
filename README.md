@@ -45,21 +45,16 @@ This API endpoint returns ports that are available in the system. Information ab
 Example:
 
 ```
-curl -H 'x-api-key: <your-api-key>' https://685rp9jkj1.execute-api.eu-west-1.amazonaws.com/prod/ports
-
-
+curl -H 'x-api-key: <your-api-key>' https://685rp9jkj1.execute-api.eu-west-1.amazonaws.com/prod/ocean/ports
+```
+```
 [
     {
         "code": "CNSGH",
         "name": "Shanghai"
     },
-    {
-        "code": "NLRTM",
-        "name": "Rotterdam"
-    },
     ...
 ]
-
 ```
 
 
@@ -74,26 +69,15 @@ API parameters are:
 Example:
 
 ```
-curl -H 'x-api-key: <your-api-key>' 'https://685rp9jkj1.execute-api.eu-west-1.amazonaws.com/prod/rates?origin=CNSGH&destination=NLRTM'
-
+curl -H 'x-api-key: <your-api-key>' 'https://685rp9jkj1.execute-api.eu-west-1.amazonaws.com/prod/ocean/rates?origin=CNSGH&destination=NOOSL'
+```
+```
 [
     {
         "day": "2021-01-01",
         "mean": 500,
         "low": 100,
         "high": 800
-    },
-    {
-        "day": "2021-01-02",
-        "mean": null,
-        "low": null,
-        "high": null
-    },
-    {
-        "day": "2021-01-03",
-        "mean": 600,
-        "low": 100,
-        "high": 900,
     },
     ...
 ]
